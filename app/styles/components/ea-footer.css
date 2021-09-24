@@ -2,11 +2,12 @@
   @apply
   bg-dgray
   content-center
-  sm:py-8
-  max-w-8xl
-  md:py-10
   text-base
-  justify-between;
+  justify-between
+  px-2
+  py-4
+  md:py-10
+  md:px-6;
 }
 .ea-footer p {
   width: auto;

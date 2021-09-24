@@ -4,11 +4,11 @@
   content-center
   text-dorange
   justify-center
-  px-2
-  py-4
   font-semibold
   md:font-extrabold
   md:justify-start
+  px-2
+  py-4
   md:py-10
   md:px-6;
 }
