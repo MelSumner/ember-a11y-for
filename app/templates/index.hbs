@@ -18,6 +18,8 @@ id="start-new-app"
 
 <p>And just like that, your website now passes <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled" rel="external">WCAG Success Criterion 2.4.2: Page Titled</a>. If you are building an Ember app, chances are you might want to add internationalization. Check out the <a href="https://github.com/ember-intl/ember-intl" rel="external">ember-intl</a> addon for ways to do that.</p>
 
+<EaDivider />
+
 <h2 id="new-app-layout"><a href="#new-app-layout">&sect;</a> Application Layout</h2>
 <p>A common but avoidable issue: the application layout is not considered in advance from a code perspective. Did you know that assistive technology like screenreaders will allow users to navigate a page based on landmark regions? Well, they can if they are present in the code, anyway. When all page content is <a href="https://dequeuniversity.com/rules/axe/4.3/region?application=AxeChrome" rel="external">contained by landmarks</a>, it provides the markup that the screen reader needs so it can improve the user experience.</p>
 
@@ -52,7 +54,7 @@ id="start-new-app"
 &lt;/footer>" />
 </div>
 
-
+<EaDivider />
 
 <h2 id="section-routing"><a href="#section-routing">&sect;</a> Accessible Routing</h2>
 <p>There are three ways that Ember apps need help when it comes to creating an accessible experience:
@@ -95,5 +97,54 @@ id="start-new-app"
 
 <p>Remember how we added an <kbd>id</kbd> attribute to the <kbd>main</kbd> when we were setting up the app layout? Well, the skiplink is wired up by default to go directly to the main, skipping the header and any navigation it contains. In true Ember fashion, strong defaults are provided but you can totally customize it to fit your app's needs! For a full list of customizable options, visit the repo's <a href="https://github.com/ember-a11y/ember-a11y-refocus#options">options section</a> in the documentation.</p>
 
+<h3>Other Routing options</h3>
+<p>While other routing addons are not as fully-featured or unobtrusive, your app might need something different. If that's the case, here are some other Ember addons for you to consider: 
+  <ol>
+    <li><a href="https://github.com/ember-a11y/ember-a11y">ember-a11y</a></li>
+    <li><a href="https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused" rel="external">ember-self-focused</a></li>
+    <li><a href="https://github.com/ember-a11y/a11y-announcer">a11y-announcer</a></li>
+  </ol>
+</p>
+
+<EaDivider />
+
+<h2 id="section-linting-and-testing"><a href="#section-linting-and-testing">&sect;</a> Linting and Testing (WIP)</h2>
+
+<p>Another important way of setting your app up for success is to use linting and testing.</p>
+
+<h3>Linting</h3>
+<p>The ember-template-lint addon is included with all new Ember apps by default. Include info about todo feature and how to make sure all of the a11y-related linting rules are turned on, as well as when to use the escape valve for linting rules.</p>
+
+<h3>Testing</h3>
+<p>Ember has you covered here too!
+  <ol>
+    <li>already included things</li>
+    <li>ember-a11y-testing</li>
+    <li>other useful testing addons</li>
+  </ol>
+</p>
+
+<EaDivider />
+
+<h2 id="section-forms">
+  <a href="section-forms">&sect;</a> Forms (WIP)
+</h2> 
+<p>Things to include:
+  <ol>
+    <li>unique-id helper</li>
+    <li>associating labels and form inputs</li>
+    <li>ember-simple-select</li>
+    <li>form guidance (ECP)</li>
+  </ol>
+</p>
+
+{{!-- 
+<EaDivider />
+<h2 id="">
+  <a href="">&sect;</a> Section Title
+</h2> 
+--}}
+
+<EaDivider />
 
 <p>....to be continued</p>
