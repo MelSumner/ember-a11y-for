@@ -1,0 +1,79 @@
+{{page-title "A How-To Guide" }}
+
+<p class="text-2xl">
+  This guide intends to help Ember developers make more accessible choices for their applications from day one. You will learn how to start your app correctly, what addons to use and what considerations you (and your team!) might need to think about/discuss.
+</p>
+
+
+<h2 id="section-new-app"><a href="#section-new-app">&sect;</a> Starting A New App</h2>
+<p>Let's go through the commands to get your brand new app off on the right foot. First, use the <kbd>lang</kbd> flag to set a default language:
+</p>
+
+<div class="w-full text-xl py-4">
+<CodeBlock
+@language="bash"
+id="start-new-app"
+@code="$ ember new fluffy-cat-website --lang en"/>
+</div>
+
+<p>And just like that, your website now passes <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled" rel="external">WCAG Success Criterion 2.4.2: Page Titled</a>. If you are building an Ember app, chances are you might want to add internationalization. Check out the <a href="https://github.com/ember-intl/ember-intl" rel="external">ember-intl</a> addon for ways to do that.</p>
+
+<h2 id="new-app-layout"><a href="#new-app-layout">&sect;</a> Application Layout</h2>
+<p>A common but avoidable issue: the application layout is not considered in advance from a code perspective. Did you know that assistive technology like screenreaders will allow users to navigate a page based on landmark regions? Well, they can if they are present in the code, anyway. When all page content is <a href="https://dequeuniversity.com/rules/axe/4.3/region?application=AxeChrome" rel="external">contained by landmarks</a>, it provides an inclusive experience.</p>
+
+<p>I like to set my app's layout in my <kbd>application.hbs</kbd> file, because it makes me think about layout from the very start, and work within the constraints I've given myself. Plus, as I add content to other route (page) templates, I don't even have to worry about whether or not the content is contained!</p>
+
+<p>The template looks something like this:</p>
+
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="markup"
+  id="application-landmarks"
+  @code="&lt;AppHeader />
+&lt;main>
+  &lbrace;&lbrace;outlet&rbrace;&rbrace;
+&lt;/main>
+&lt;AppFooter />" />
+</div>
+
+
+
+
+<h2 id="section-routing"><a href="#section-routing">&sect;</a> Accessible Routing</h2>
+<p>There are three ways that Ember apps need help when it comes to creating an accessible experience:
+  <ol>
+    <li>When the route transition happens, new content is not automatically read by screen readers. (Want a deep dive? <a href="" rel="external">read some research</a>!)</li>
+    <li>When a route transition occurs (e.g., a user goes from one page to another), the focus is not reset.</li>
+    <li><a href="" rel="external">Skiplinks</a> are not available.</li>
+  </ol>
+</p>
+<h3>how to fix this issue</h3>
+<p>It will be unsurprising that there are addons for this, but only one addon provides an answer to all three of these issues at once: <a href="" rel="external">ember-a11y-refocus</a>.</p>
+
+<p>To use the addon, install it in your app. If you're on npm, run:</p>
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="bash"
+  id="install-ember-a11y-refocus-npm"
+  @code="$ npm install ember-a11y-refocus" />
+</div>
+
+<p>If you're using yarn:</p>
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="bash"
+  id="install-ember-a11y-refocus-yarn"
+  @code="$ yarn add ember-a11y-refocus" />
+</div>
+
+<p>Then, add the component just inside the app's header. For this example, I will use the header component of this website:</p>
+
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="markup"
+  id="use-ember-a11y-refocus"
+  @code="&lt;header class=&quot;ea-header&quot;>
+  &lt;NavigationNarrator/>
+  &lt;h1>Building Accessible Ember Applications&lt;/h1>
+&lt;/header>" />
+</div>

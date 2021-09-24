@@ -1,0 +1,25 @@
+.ea-header {
+  /* TODO customize weights in config */
+  font-weight: 800;
+  @apply
+  bg-dgray
+  content-center
+  text-dorange
+  sm:justify-center
+  sm:px-8
+  sm:py-4
+  max-w-8xl
+  md:justify-start
+  md:py-10
+  md:px-6;
+}
+h1 {
+  @apply
+  flex
+  flex-wrap
+  md:justify-start
+  sm:justify-center
+  md:text-5xl
+  lg:text-6xl
+  w-full;
+}

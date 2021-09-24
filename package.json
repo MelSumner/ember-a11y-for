@@ -2,10 +2,10 @@
   "name": "ember-a11y-for",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for ember-a11y-for goes here",
+  "description": "An app that provides a11y guidance for Ember developers",
   "repository": "",
   "license": "MIT",
-  "author": "",
+  "author": "Melanie Sumner <melanie.sumner@hey.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -25,17 +25,21 @@
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.2.5",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
+    "autoprefixer": "^10.3.5",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-auto-import": "^1.11.3",
+    "ember-a11y-refocus": "^2.0.0",
+    "ember-auto-import": "^2.2.0",
     "ember-cli": "~3.27.0",
     "ember-cli-app-version": "^5.0.0",
     "ember-cli-babel": "^7.26.6",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-inject-live-reload": "^2.0.2",
+    "ember-cli-postcss": "^7.0.2",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-data": "~3.27.1",
@@ -48,7 +52,6 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.27.2",
     "ember-template-lint": "^3.4.2",
-    "ember-welcome-page": "^4.0.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-ember": "^10.4.2",
@@ -57,14 +60,21 @@
     "eslint-plugin-qunit": "^6.1.1",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
+    "postcss-import": "^14.0.2",
     "prettier": "^2.3.0",
     "qunit": "^2.15.0",
-    "qunit-dom": "^1.6.0"
+    "qunit-dom": "^1.6.0",
+    "tailwindcss": "^2.2.15"
   },
   "engines": {
     "node": "10.* || >= 12"
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "ember-prism": "^0.11.0",
+    "webpack": "^5.53.0"
   }
 }

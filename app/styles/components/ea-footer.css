@@ -1,0 +1,16 @@
+.ea-footer {
+  @apply
+  bg-dgray
+  content-center
+  sm:py-8
+  max-w-8xl
+  md:py-10
+  text-base
+  justify-between;
+}
+.ea-footer p {
+  width: auto;
+}
+.ea-footer p + p {
+  margin-top: 0;
+}
