@@ -28,7 +28,7 @@ id="start-new-app"
 <div class="w-full text-xl py-4">
   <CodeBlock
   @language="markup"
-  id="application-landmarks"
+  id="application-landmarks-components"
   @code="&lt;AppHeader />
 &lt;main id=&quot;main&quot;>
   &lbrace;&lbrace;outlet&rbrace;&rbrace;
@@ -36,6 +36,21 @@ id="start-new-app"
 &lt;AppFooter />" />
 </div>
 
+<p>Of course, if you don't use a header and footer custom component, you could add them directly to your application template:</p>
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="markup"
+  id="application-landmarks"
+  @code="&lt;header>
+  &lt;h1>My Fluffy Cat&lt;/h1>
+&lt;/header>
+&lt;main id=&quot;main&quot;>
+  &lbrace;&lbrace;outlet&rbrace;&rbrace;
+&lt;/main>
+&lt;footer>
+  &lt;p>&copy;2021 Fluffy Cat Owners LLC&lt;/p>
+&lt;/footer>" />
+</div>
 
 
 
