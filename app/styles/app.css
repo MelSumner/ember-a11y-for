@@ -22,6 +22,7 @@ header, main, footer {
   flex
   flex-wrap
   container
+  max-w-8xl
   mx-auto;
 }
 /* header styles in ea-header.css */
@@ -31,6 +32,8 @@ main {
   content-start
   bg-dgray-light
   min-h-screen
+  px-2
+  py-4
   md:p-8;
 }
 
