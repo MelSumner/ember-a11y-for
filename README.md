@@ -1,7 +1,10 @@
 # ember-a11y-for
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an Ember Application that provides information specifically regarding building accessible Ember apps.
+
+If you would like to suggest a change or improvement, please file an issue.
+
+Pull requests for issues are welcome!
 
 ## Prerequisites
 
