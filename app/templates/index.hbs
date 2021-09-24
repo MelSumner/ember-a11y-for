@@ -30,7 +30,7 @@ id="start-new-app"
   @language="markup"
   id="application-landmarks"
   @code="&lt;AppHeader />
-&lt;main>
+&lt;main id=&quot;main&quot;>
   &lbrace;&lbrace;outlet&rbrace;&rbrace;
 &lt;/main>
 &lt;AppFooter />" />
@@ -42,13 +42,13 @@ id="start-new-app"
 <h2 id="section-routing"><a href="#section-routing">&sect;</a> Accessible Routing</h2>
 <p>There are three ways that Ember apps need help when it comes to creating an accessible experience:
   <ol>
-    <li>When the route transition happens, new content is not automatically read by screen readers. (Want a deep dive? <a href="" rel="external">read some research</a>!)</li>
+    <li>When the route transition happens, new content is not automatically read by screen readers. (Want a deep dive? <a href="https://github.com/MelSumner/ember-a11y-roadmap/tree/master/rfc-research/router" rel="external">read some research</a>!)</li>
     <li>When a route transition occurs (e.g., a user goes from one page to another), the focus is not reset.</li>
-    <li><a href="" rel="external">Skiplinks</a> are not available.</li>
+    <li>A <a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html" rel="external">bypass mechanism</a> that links directly to the main content is not available.</li>
   </ol>
 </p>
 <h3>how to fix this issue</h3>
-<p>It will be unsurprising that there are addons for this, but only one addon provides an answer to all three of these issues at once: <a href="" rel="external">ember-a11y-refocus</a>.</p>
+<p>It will be unsurprising that there are addons for this, but only one addon provides an answer to all three of these issues at once: <a href="https://github.com/ember-a11y/ember-a11y-refocus" rel="external">ember-a11y-refocus</a>.</p>
 
 <p>To use the addon, install it in your app. If you're on npm, run:</p>
 <div class="w-full text-xl py-4">
@@ -66,14 +66,16 @@ id="start-new-app"
   @code="$ yarn add ember-a11y-refocus" />
 </div>
 
-<p>Then, add the component just inside the app's header. For this example, I will use the header component of this website:</p>
+<p>Then, add the <kbd>&lt;NavigationNarrator/></kbd> component just inside the app's header:</p>
 
 <div class="w-full text-xl py-4">
   <CodeBlock
   @language="markup"
   id="use-ember-a11y-refocus"
-  @code="&lt;header class=&quot;ea-header&quot;>
+  @code="&lt;header>
   &lt;NavigationNarrator/>
   &lt;h1>Building Accessible Ember Applications&lt;/h1>
 &lt;/header>" />
 </div>
+
+<p>Remember how we added an <kbd>id</kbd> attribute to the <kbd>main</kbd> when we were setting up the app layout? Well, the skiplink is wired up by default to go directly to the main, skipping the header and any navigation it contains. In true Ember fashion, strong defaults are provided but you can totally customize it to fit your app's needs! For a full list of customizable options, visit the repo's <a href="https://github.com/ember-a11y/ember-a11y-refocus#options">options section</a> in the documentation.</p>
