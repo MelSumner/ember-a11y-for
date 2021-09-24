@@ -42,7 +42,8 @@ main {
 h2 {
   font-weight: 600;
   @apply 
-  text-4xl
+  text-3xl
+  md:text-4xl
   text-dyellow
   w-full 
   pb-4 
@@ -51,7 +52,8 @@ h2 {
 h3 { 
   @apply 
   mt-8
-  text-3xl
+  text-2xl
+  md:text-3xl
   text-dblue
   uppercase
   font-bold
@@ -93,4 +95,8 @@ ol {
   @apply
   list-decimal
   list-inside;
+}
+
+pre, pre code {
+  white-space: pre-wrap !important;
 }
