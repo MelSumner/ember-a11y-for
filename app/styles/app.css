@@ -112,25 +112,25 @@ pre[class*="language-"]{
 /* take these out once you correctly integrate dracula as the prism theme */
 .token.tag {
   @apply
-  text-dpink
+  text-dpink !important;
 }
 .token.tag .token.punctuation {
   @apply
-  text-white;
+  text-white !important;
 }
 .token.attr-name {
   @apply
-  text-dgreen;
+  text-dgreen !important;
 }
 .token.attr-value {
   @apply
-  text-dyellow;
+  text-dyellow !important;
 }
 .token.tag .token.attr-value .token.punctuation {
   @apply
-  text-dyellow;
+  text-dyellow !important;
 }
 .token.tag .token.attr-value .token.punctuation.attr-equals{
   @apply
-  text-dpink;
+  text-dpink !important;
 }
