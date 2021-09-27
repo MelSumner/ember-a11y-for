@@ -21,7 +21,7 @@ id="start-new-app"
 <EaDivider />
 
 <h2 id="new-app-layout"><a href="#new-app-layout">&sect;</a> Application Layout</h2>
-<p>A common but avoidable issue: the application layout is not considered in advance from a code perspective. Did you know that when you use landmark regions like `<main>`, assistive technology like screenreaders will allow users to navigate a page more easily? When all page content is <a href="https://dequeuniversity.com/rules/axe/4.3/region?application=AxeChrome" rel="external">contained by landmarks</a>, it provides the markup that the screen reader needs so it can improve the user experience.</p>
+<p>A common but avoidable issue: the application layout is not considered in advance from a code perspective. Did you know that when you use landmark regions like <kbd>&lt;main></kbd>, assistive technology like screenreaders will allow users to navigate a page more easily? When all page content is <a href="https://dequeuniversity.com/rules/axe/4.3/region?application=AxeChrome" rel="external">contained by landmarks</a>, it provides the markup that the screen reader needs so it can improve the user experience.</p>
 
 <p>I like to set my app's layout in my <kbd>application.hbs</kbd> file, because it makes me think about layout from the very start, and work within the constraints I've given myself. Plus, as I add content to other route (page) templates, I don't even have to worry about whether or not the content is contained! The markup in the `application.hbs` file is applied to all routes within your app.</p>
 
