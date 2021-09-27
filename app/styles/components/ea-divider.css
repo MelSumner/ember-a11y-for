@@ -1,0 +1,9 @@
+.ea-divider {
+  @apply 
+  bg-gray-600 
+  flex 
+  mt-12 
+  mx-auto
+  p-px 
+  w-11/12;
+}

@@ -6,6 +6,8 @@
 
 @import "./components/ea-header";
 @import "./components/ea-footer";
+@import "./components/ea-divider";
+@import "./components/ea-callout";
 
 html {
   font-size: 16px;
@@ -54,7 +56,7 @@ h3 {
   mt-8
   text-2xl
   md:text-3xl
-  text-dblue
+  text-dorange
   uppercase
   font-bold
   tracking-wide; 
