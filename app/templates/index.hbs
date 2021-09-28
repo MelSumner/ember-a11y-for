@@ -107,9 +107,9 @@ id="start-new-app"
 <h3>Other Routing options</h3>
 <p>While other routing addons are not as fully-featured or unobtrusive, your app might need something different. If that's the case, here are some other Ember addons for you to consider: 
   <ol>
-    <li><a href="https://github.com/ember-a11y/ember-a11y">ember-a11y</a></li>
+    <li><a href="https://github.com/ember-a11y/ember-a11y" rel="external">ember-a11y</a></li>
     <li><a href="https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused" rel="external">ember-self-focused</a></li>
-    <li><a href="https://github.com/ember-a11y/a11y-announcer">a11y-announcer</a></li>
+    <li><a href="https://github.com/ember-a11y/a11y-announcer" rel="external">a11y-announcer</a></li>
   </ol>
 </p>
 
@@ -118,7 +118,18 @@ id="start-new-app"
 <p>Another important way of setting your app up for success is to use linting and testing.</p>
 
 <h3>Linting</h3>
-<p>The ember-template-lint addon is included with all new Ember apps by default. Include info about todo feature and how to make sure all of the a11y-related linting rules are turned on, as well as when to use the escape valve for linting rules.</p>
+<p>The <a href="https://github.com/ember-template-lint/ember-template-lint" rel="external">ember-template-lint</a> addon is included with all new Ember apps by default, and there are 26 rules (and counting!) that specifically check for potential accessibility conformance issues.</p>
+
+<p>Now, in some cases, you might find a conflict with the way you write your code and the rule that is telling you that there is an error. Here's my advice for that: don't take our word for it! We wrote these linting rules according to the spec, but <em>sometimes</em> you'll need a workaround. One example of this is the rule <kbd>no-down-event-binding</kbd>. There are some occasions where binding on the keydown event is the way you're supposed to do it. So why did we write the rule?
+  <ol>
+    <li>because the majority of times you shouldn't do it</li>
+    <li>because the exception is the rare occasion</li>
+    <li>because we want to provide best practices</li>
+    <li>because we also provide a way for you to customize what rules are turned on or turned off</li>
+  </ol>
+</p>
+
+{{!-- Include info about todo feature and how to make sure all of the a11y-related linting rules are turned on, as well as when to use the escape valve for linting rules. --}}
 
 <h3>Testing</h3>
 <p>Ember has you covered here too!
@@ -168,6 +179,7 @@ id="start-new-app"
   <ol>
     <li>Focus Management</li>
     <li>Forms</li>
+    <li>A Basic Checklist for Code</li>
     <li>Helpful Resources</li>
   </ol>
 </p>
