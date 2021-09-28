@@ -1,6 +1,10 @@
 .ea-callout {
+  border: 1px solid rgb(229, 231, 235);
+  border-left: 14px solid #80FFEA;
+  border-radius: 6px;
   display: flex;
   flex-flow: row wrap;
-  border: 1px solid rgb(229, 231, 235);
-  border-left: 4px solid #80FFEA;
+  margin: 2rem auto 0 auto;
+  max-width: 85%;
+  padding: 1em;
 }

@@ -4,9 +4,16 @@
   This guide intends to help Ember developers make more accessible choices for their applications from day one. You will learn how to create your app, which addons to use, and what you or your team might need to consider along the way.
 </p>
 
+<EaCallout>
+<p>Note: Sometimes there are ways to reach accessibility conformance that will be different from what you read here. It should not be assumed that one approach is wrong and one is right; instead, consider the intent. For each item here, I will endeavor to include reasoning; if you are required to take a different approach, you can still try to reach the same outcome.</p>
+</EaCallout>
 
 <h2 id="section-new-app"><a href="#section-new-app">&sect;</a> Starting A New App</h2>
-<p>Let's go through the commands to get your brand new app off on the right foot. First, when you generate your app's files, use the <kbd>lang</kbd> flag to set a default language:
+
+<p>Let's go through the commands to get your brand new app off on the right foot. Did you know that assistive technology needs to know what language your page is? By default, most screen readers will take the operating system's language- but that doesn't mean the websites you visit will be in the same language! So, let's make sure it gets defined for the whole app at least once.
+</p>
+
+<p>First, when you generate your app's files, use the <kbd>lang</kbd> flag to set a default language:
 </p>
 
 <div class="w-full text-xl py-4">
@@ -16,7 +23,7 @@ id="start-new-app"
 @code="$ ember new fluffy-cat-website --lang en"/>
 </div>
 
-<p>And just like that, your website now passes <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled" rel="external">WCAG Success Criterion 2.4.2: Page Titled</a>. If you are building an Ember app, chances are you might want to add internationalization. Check out the <a href="https://github.com/ember-intl/ember-intl" rel="external">ember-intl</a> addon for ways to do that.</p>
+<p>And just like that, your website now passes <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled" rel="external">WCAG Success Criterion 2.4.2: Page Titled</a>.If you are building an Ember app, chances are you might want to add internationalization. Check out the <a href="https://github.com/ember-intl/ember-intl" rel="external">ember-intl</a> addon for ways to do that.</p>
 
 <EaDivider />
 
@@ -107,9 +114,7 @@ id="start-new-app"
 </p>
 
 <EaDivider />
-
 <h2 id="section-linting-and-testing"><a href="#section-linting-and-testing">&sect;</a> Linting and Testing (WIP)</h2>
-
 <p>Another important way of setting your app up for success is to use linting and testing.</p>
 
 <h3>Linting</h3>
@@ -124,27 +129,16 @@ id="start-new-app"
   </ol>
 </p>
 
+{{!-- 
 <EaDivider />
-<h2 id="section-coming-soon">
-  <a href="">&sect;</a> Coming Soon
-</h2>
-<p>
-  <ol>
-    <li>Focus Management</li>
-    <li>Forms</li>
-    <li>Helpful Resources</li>
-  </ol>
-</p>
-
-{{!-- <EaDivider />
 <h2 id="section-focus-management">
   <a href="">&sect;</a> Focus Management
 </h2>
-<p>Coming Soon! </p> --}}
+<p>Coming Soon!</p>
+--}}
 
 {{!-- 
 <EaDivider />
-
 <h2 id="section-forms">
   <a href="section-forms">&sect;</a> Forms
 </h2> 
@@ -156,19 +150,27 @@ id="start-new-app"
     <li>ember-simple-select</li>
     <li>form guidance (ECP)</li>
   </ol>
-</p> --}}
+</p> 
+--}}
 
-{{!-- <EaDivider />
+{{!-- 
+<EaDivider />
 <h2 id="section-resources">
   <a href="section-resources">&sect;</a> Helpful Resources
-</h2> 
+</h2>
+--}}
 
-<p>Coming Soon!
-</p> --}}
-
-{{!-- <ol>
-  <li></li>
-</ol> --}}
+<EaDivider />
+<h2 id="section-coming-soon">
+  <a href="section-coming-soon">&sect;</a> Coming Soon
+</h2>
+<p>
+  <ol>
+    <li>Focus Management</li>
+    <li>Forms</li>
+    <li>Helpful Resources</li>
+  </ol>
+</p>
 
 {{!-- 
 <EaDivider />
