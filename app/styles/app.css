@@ -98,6 +98,10 @@ ol {
   list-decimal
   list-inside;
 }
+ol a {
+  @apply
+  underline;
+}
 
 
 /* some prism overrides */

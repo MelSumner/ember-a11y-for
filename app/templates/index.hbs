@@ -1,14 +1,14 @@
-{{page-title "A How-To Guide" }}
+{{page-title "A How-To Guide"}}
 
 <p class="text-2xl">
   This guide intends to help Ember developers make more accessible choices for their applications from day one. You will learn how to create your app, which addons to use, and what you or your team might need to consider along the way.
 </p>
 
 <EaCallout>
-<p>Note: Sometimes there are ways to reach accessibility conformance that will be different from what you read here. It should not be assumed that one approach is wrong and one is right; instead, consider the intent. For each item here, I will endeavor to include reasoning; if you are required to take a different approach, you can still try to reach the same outcome.</p>
+<p>Note: Sometimes there are ways to reach accessibility conformance that will be different from what you read here. It should not be assumed that one approach is wrong and one is right; instead, consider the intent. For each item here, I will endeavor to include reasoning; if you are required to take a different approach, you can still try to reach the same outcome. Still unsure what to do? Ask in the #topic-a11y channel on the Ember Discord server!</p>
 </EaCallout>
 
-<h2 id="section-new-app"><a href="#section-new-app">&sect;</a> Starting A New App</h2>
+<h2 id="section-new-app" class="pt-0"><a href="#section-new-app">&sect;</a> Starting A New App</h2>
 
 <p>Let's go through the commands to get your brand new app off on the right foot. Did you know that assistive technology needs to know what language your page is? By default, most screen readers will take the operating system's language- but that doesn't mean the websites you visit will be in the same language! So, let's make sure it gets defined for the whole app at least once.
 </p>
@@ -36,7 +36,7 @@ id="start-new-app"
 
 <div class="w-full text-xl py-4">
   <CodeBlock
-  @language="markup"
+  @language="handlebars"
   id="application-landmarks-components"
   @code="&lt;AppHeader />
 &lt;main id=&quot;main&quot;>
@@ -48,7 +48,7 @@ id="start-new-app"
 <p>Of course, if you don't use a header and footer custom component, you could add them directly to your application template:</p>
 <div class="w-full text-xl py-4">
   <CodeBlock
-  @language="markup"
+  @language="handlebars"
   id="application-landmarks"
   @code="&lt;header>
   &lt;h1>My Fluffy Cat&lt;/h1>
@@ -62,7 +62,41 @@ id="start-new-app"
 </div>
 
 <EaDivider />
+<h2 id="section-page-title">
+  <a href="section-page-title">&sect;</a> Page Titles
+</h2> 
 
+<p>Now that we have an application layout, we need to think a bit about our page titles. This information helps the user know where they are within the application, and helps our app meet <a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html" rel="external">WCAG Success Criteria 2.4.2: Page Titled</a>. </p>
+
+<p>You'll want to plan your app's content and plan your routes accordingly. The bonus here is that you'll also be planning your breadcrumbs!</p>
+
+<EaCallout>
+  <p>If you want to better understand information architecture, check out <a href="https://abookapart.com/products/everyday-information-architecture" rel="external">Everyday Information Architecture</a> by Lisa Maria Marquis!</p>
+</EaCallout>
+
+<p>
+  The <kbd>ember-page-title</kbd> addon is included in all new Ember apps by default, and it will automatically add the route name as the page title value.
+</p>
+
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="handlebars"
+  id="page-title-default"
+  @code="&lbrace;&lbrace;page-title &quot;Index&quot;&rbrace;&rbrace;" />
+</div>
+
+<p>Of course, "Index" isn't really a meaningful page title, so make sure to update it to reflect the actual content or purpose of the page.</p>
+
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="handlebars"
+  id="page-title-meaningful"
+  @code="&lbrace;&lbrace;page-title &quot;A How-To Guide&quot;&rbrace;&rbrace;" />
+</div>
+
+<p>There are a lot of customizable options, so make sure to check out all of the <a href="https://github.com/ember-cli/ember-page-title" rel="external">options in the documentation</a>.</p>
+
+<EaDivider />
 <h2 id="section-routing"><a href="#section-routing">&sect;</a> Accessible Routing</h2>
 <p>Here are three common problems present in many single-page applications:
   <ol>
@@ -102,7 +136,9 @@ id="start-new-app"
 &lt;/header>" />
 </div>
 
-<p>Remember how we added an <kbd>id</kbd> attribute to the <kbd>main</kbd> when we were setting up the app layout? Well, the skiplink is wired up by default to go directly to the main, skipping the header and any navigation it contains. In true Ember fashion, strong defaults are provided but you can totally customize it to fit your app's needs! For a full list of customizable options, visit the repo's <a href="https://github.com/ember-a11y/ember-a11y-refocus#options">options section</a> in the documentation.</p>
+<p>Remember how we added an <kbd>id</kbd> attribute to the <kbd>main</kbd> when we were setting up the app layout? Well, the skiplink is wired up by default to go directly to the main, skipping the header and any navigation it contains. In true Ember fashion, strong defaults are provided but you can totally customize it to fit your app's needs!
+</p>
+<p>For a full list of customizable options, visit the repo's <a href="https://github.com/ember-a11y/ember-a11y-refocus#options">options section</a> in the documentation.</p>
 
 <h3>Other Routing options</h3>
 <p>While other routing addons are not as fully-featured or unobtrusive, your app might need something different. If that's the case, here are some other Ember addons for you to consider: 
@@ -120,14 +156,10 @@ id="start-new-app"
 <h3>Linting</h3>
 <p>The <a href="https://github.com/ember-template-lint/ember-template-lint" rel="external">ember-template-lint</a> addon is included with all new Ember apps by default, and there are 26 rules (and counting!) that specifically check for potential accessibility conformance issues.</p>
 
-<p>Now, in some cases, you might find a conflict with the way you write your code and the rule that is telling you that there is an error. Here's my advice for that: don't take our word for it! We wrote these linting rules according to the spec, but <em>sometimes</em> you'll need a workaround. One example of this is the rule <kbd>no-down-event-binding</kbd>. There are some occasions where binding on the keydown event is the way you're supposed to do it. So why did we write the rule?
-  <ol>
-    <li>because the majority of times you shouldn't do it</li>
-    <li>because the exception is the rare occasion</li>
-    <li>because we want to provide best practices</li>
-    <li>because we also provide a way for you to customize what rules are turned on or turned off</li>
-  </ol>
+<p>Now, in some cases, you might find a conflict with the way you write your code and the rule that is telling you that there is an error. Here's my advice for that: don't take our word for it! We wrote these linting rules according to the spec, but <em>sometimes</em> you'll need a workaround. In these cases, you can <a href="https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/configuration.md#per-template-file" rel="external">disable the rule inline</a>, just note that this really should be a rare exception!
 </p>
+
+<p>The <kbd>ember-template-lint</kbd> addon has a lot of options, so make sure to check out the documentation!</p>
 
 {{!-- Include info about todo feature and how to make sure all of the a11y-related linting rules are turned on, as well as when to use the escape valve for linting rules. --}}
 
