@@ -26,7 +26,7 @@ header, main, footer {
   flex
   flex-wrap
   container
-  max-w-8xl
+  max-w-7xl
   mx-auto;
 }
 /* header styles in ea-header.css */
