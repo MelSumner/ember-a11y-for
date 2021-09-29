@@ -9,6 +9,8 @@
 @import "./components/ea-divider";
 @import "./components/ea-callout";
 
+@import "./prism-dracula";
+
 html {
   font-size: 16px;
   line-height: 1;
@@ -87,10 +89,10 @@ a {
 }
 
 /* here we are using kbd for inline code annotations */
-kbd {
+/* kbd {
   @apply
   text-dpink;
-}
+} */
 
 ol {
   @apply
