@@ -89,8 +89,7 @@ a {
 /* here we are using kbd for inline code annotations */
 kbd {
   @apply
-  text-dpink
-  text-xl;
+  text-dpink;
 }
 
 ol {
