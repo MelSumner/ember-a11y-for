@@ -104,6 +104,12 @@ ol a {
   underline;
 }
 
+code {
+  font-size: 0.9em;
+  @apply
+  text-dpink;
+}
+
 
 /* some prism overrides */
 pre, pre code {
@@ -113,3 +119,4 @@ pre[class*="language-"]{
   background: black;
   background-color: black;
 }
+

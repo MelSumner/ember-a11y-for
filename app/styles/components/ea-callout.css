@@ -1,5 +1,6 @@
 .ea-callout {
-  border: 1px solid rgb(229, 231, 235);
+  background-color: black;
+  border: 1px solid #80FFEA;
   border-left: 14px solid #80FFEA;
   border-radius: 6px;
   display: flex;
