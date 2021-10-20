@@ -35,7 +35,7 @@ module.exports = function (defaults) {
       },
     },
     'ember-prism': {
-      theme: 'funky',
+      theme: 'dracula',
       components: ['markup', 'bash', 'markup-templating', 'handlebars'], //needs to be an array, or undefined.
       plugins: ['line-numbers', 'toolbar', 'copy-to-clipboard', 'autoloader'],
     },
