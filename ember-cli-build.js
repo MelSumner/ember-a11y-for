@@ -35,7 +35,7 @@ module.exports = function (defaults) {
       },
     },
     'ember-prism': {
-      theme: 'funky',
+      theme: 'none',
       components: ['markup', 'bash', 'markup-templating', 'handlebars'], //needs to be an array, or undefined.
       plugins: ['line-numbers', 'toolbar', 'copy-to-clipboard', 'autoloader'],
     },
@@ -54,6 +54,8 @@ module.exports = function (defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+
+  app.import('app/styles/prism-dracula.css');
 
   return app.toTree();
 };
