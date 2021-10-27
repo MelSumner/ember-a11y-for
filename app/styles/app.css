@@ -9,8 +9,6 @@
 @import "./components/ea-divider";
 @import "./components/ea-callout";
 
-@import "./prism-dracula";
-
 html {
   font-size: 16px;
   line-height: 1;
@@ -45,34 +43,34 @@ main {
 
 h2 {
   font-weight: 600;
-  @apply 
+  @apply
   text-3xl
   md:text-4xl
   text-dyellow
-  w-full 
-  pb-4 
-  pt-12; 
+  w-full
+  pb-4
+  pt-12;
 }
-h3 { 
-  @apply 
+h3 {
+  @apply
   mt-8
   text-2xl
   md:text-3xl
   text-dorange
   uppercase
   font-bold
-  tracking-wide; 
+  tracking-wide;
 }
 
 p {
-  @apply 
+  @apply
   w-full
   m-0
   p-0
   text-xl;
 }
 p + p,
-p > ol, 
+p > ol,
 p > ul {
   @apply
   mt-4;
