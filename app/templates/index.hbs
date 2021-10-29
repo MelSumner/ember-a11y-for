@@ -179,8 +179,8 @@ id="start-new-app"
 <p>Focus determines which part of your application receives events from the keyboard and clipboard at any given time. Good focus management can provide a better experience for all of your users, but is particularly critical for those who may navigate exclusively via their keyboard or other input device, such as a switch device.</p>
 
 <h3>Included in the browser</h3>
-<p>Browsers come with built-in focus behavior based on the type of elements used. Interactive elements like buttons and text fields are implicitly focusable, which means that they are automatically inserted into the tab order of the page and come with built-in event handling.</p>
-<p>Non-interactive elements purposely do not receive focus without developer intervention, because no action from the user is expected.</p>
+<p>Browsers come with built-in focus behavior based on the type of elements used. Interactive elements like buttons and input fields are implicitly focusable, which means that they are automatically inserted into the tab order of the page and come with built-in event handling.</p>
+<p>Non-interactive elements purposely do not receive focus without developer intervention, because no action from the user is expected. In Ember, we help you stay on the well-lit path and disallow interactivity on non-interactive elements, through the no-invalid-interactive rule in <a href="https://github.com/ember-template-lint/ember-template-lint" rel="external">ember-template-lint</a>.</p>
 
 <h3>Screenreaders: browsing mode vs focus mode</h3>
 <p>Screenreaders offer users different ways of navigating your web app; the most common modes are <em>browse</em> and <em>focus</em>.</p>
@@ -188,10 +188,9 @@ id="start-new-app"
 <p>It's not possible, however, to interact with the page while in browse mode. Instead, users can switch to focus mode which will pass keystrokes directly to the browser. Navigation in focus mode behaves like keyboard-only navigation (<code>Tab</code> will jump to the next focusable element, or <code>Shift</code> + <code>Tab</code> to the previous).</p>
 
 <h3>Focus Order</h3>
-<p>It's important to keep focus behavior logical and predictable. This can require extra care when user interaction modifies the tabbable order of elements, such as by opening or closing a modal. In the case of a modal, focus should move to an element inside the modal while open (and not be permitted to reach the page below). Conversely, closing the modal should revert focus back to the originating element that triggered opening it. </p>
-
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html" rel="external">Focus order</a> is an important part of ensuring that your Ember application is accessible. As such, it's vital that focus behavior is logical and predictable, providing <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html" rel="external">meaningful sequence</a>. This can require extra care when user interaction modifies the tabbable order of elements, such as by opening or closing a modal. In the case of a modal, focus should move to an element inside the modal while open (and not be permitted to reach the page below). Conversely, closing the modal should revert focus back to the originating element that triggered opening it. </p>
 <h3>How focus works in Ember</h3>
-<p>Coming soon </p>
+<p>Coming soon!</p>
 
 <h3>Helpful Addons </h3>
 <p>
