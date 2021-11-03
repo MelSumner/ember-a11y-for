@@ -1,7 +1,7 @@
 {{page-title "A How-To Guide"}}
 
 <p class="text-2xl">
-  This guide intends to help Ember developers make more accessible choices for their applications from day one. You will learn how to create your app, which add-ons to use, and what you or your team might need to consider along the way.
+  This guide intends to help Ember developers make more accessible choices for their applications from day one. You will learn how to create your app, which addons to use, and what you or your team might need to consider along the way.
 </p>
 
 <EaCallout>
@@ -23,7 +23,7 @@ id="start-new-app"
 @code="$ ember new fluffy-cat-website --lang en"/>
 </div>
 
-<p>And just like that, your website now passes <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled" rel="external">WCAG Success Criterion 2.4.2: Page Titled</a>.If you are building an Ember app, chances are you might want to add internationalization. Check out the <a href="https://github.com/ember-intl/ember-intl" rel="external">ember-intl</a> add-on for ways to do that.</p>
+<p>And just like that, your website now passes <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled" rel="external">WCAG Success Criterion 2.4.2: Page Titled</a>.If you are building an Ember app, chances are you might want to add internationalization. Check out the <a href="https://github.com/ember-intl/ember-intl" rel="external">ember-intl</a> addon for ways to do that.</p>
 
 <EaDivider />
 
@@ -75,7 +75,7 @@ id="start-new-app"
 </EaCallout>
 
 <p>
-  The <code>ember-page-title</code> add-on is included in all new Ember apps by default, and it will automatically add the route name as the page title value.
+  The <code>ember-page-title</code> addon is included in all new Ember apps by default, and it will automatically add the route name as the page title value.
 </p>
 
 <div class="w-full text-xl py-4">
@@ -106,9 +106,9 @@ id="start-new-app"
   </ol>
 </p>
 <h3>How to fix these routing issues</h3>
-<p>It will be unsurprising that there are add-ons for this, but only one add-on provides an answer to all three of these issues at once: <a href="https://github.com/ember-a11y/ember-a11y-refocus" rel="external">ember-a11y-refocus</a>.</p>
+<p>It will be unsurprising that there are addons for this, but only one addon provides an answer to all three of these issues at once: <a href="https://github.com/ember-a11y/ember-a11y-refocus" rel="external">ember-a11y-refocus</a>.</p>
 
-<p>To use the add-on, install it in your app. If you are using npm, run:</p>
+<p>To use the addon, install it in your app. If you are using npm, run:</p>
 <div class="w-full text-xl py-4">
   <CodeBlock
   @language="bash"
@@ -141,7 +141,7 @@ id="start-new-app"
 <p>For a full list of customizable options, visit the repo's <a href="https://github.com/ember-a11y/ember-a11y-refocus#options">options section</a> in the documentation.</p>
 
 <h3>Other Routing options</h3>
-<p>While other routing add-ons are not as fully-featured or unobtrusive, your app might need something different. If that's the case, here are some other Ember add-ons for you to consider: 
+<p>While other routing addons are not as fully-featured or unobtrusive, your app might need something different. If that's the case, here are some other Ember addons for you to consider: 
   <ol>
     <li><a href="https://github.com/ember-a11y/ember-a11y" rel="external">ember-a11y</a></li>
     <li><a href="https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused" rel="external">ember-self-focused</a></li>
@@ -154,20 +154,20 @@ id="start-new-app"
 <p>Another important way of setting your app up for success is to use linting and testing.</p>
 
 <h3>Linting</h3>
-<p>The <a href="https://github.com/ember-template-lint/ember-template-lint" rel="external">ember-template-lint</a> add-on is included with all new Ember apps by default, and there are 26 rules (and counting!) that specifically check for potential accessibility conformance issues.</p>
+<p>The <a href="https://github.com/ember-template-lint/ember-template-lint" rel="external">ember-template-lint</a> addon is included with all new Ember apps by default, and there are 26 rules (and counting!) that specifically check for potential accessibility conformance issues.</p>
 
 <p>Now, in some cases, you might find a conflict with the way you write your code and the rule that is telling you that there is an error. Here's my advice for that: don't take our word for it! We wrote these linting rules according to the spec, but <em>sometimes</em> you'll need a workaround. In these cases, you can <a href="https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/configuration.md#per-template-file" rel="external">disable the rule inline</a>, just note that this really should be a rare exception!
 </p>
 
-<p>The <code>ember-template-lint</code> add-on has a lot of options, so make sure to read through the documentation!</p>
+<p>The <code>ember-template-lint</code> addon has a lot of options, so make sure to read through the documentation!</p>
 
 {{!-- Include info about todo feature and how to make sure all of the a11y-related linting rules are turned on, as well as when to use the escape valve for linting rules. --}}
 
 <h3>Testing</h3>
-<p>Ember has you covered here too! For accessibility issues that can be tested for <a href="https://a11y-automation.dev">in an automated fashion</a>, you can use the <a href="https://github.com/ember-a11y/ember-a11y-testing" rel="external">ember-a11y-testing</a> add-on.</p>
+<p>Ember has you covered here too! For accessibility issues that can be tested for <a href="https://a11y-automation.dev">in an automated fashion</a>, you can use the <a href="https://github.com/ember-a11y/ember-a11y-testing">ember-a11y-testing</a> addon.</p>
 
 <p>
-Of course, we can only automate a small number of accessibility checks, so developers must become comfortable with writing their own. One useful way to do this is to use the <a href="https://github.com/simplabs/qunit-dom" rel="external">qunit-dom</a> add-on, which will allow you to write tests that target specific attributes in your code- in this case, accessibility attributes. 
+Of course, we can only automate a small number of accessibility checks, so developers must become comfortable with writing their own. One useful way to do this is to use the <a href="https://github.com/simplabs/qunit-dom">qunit-dom</a> addon, which will allow you to write tests that target specific attributes in your code- in this case, accessibility attributes. 
 </p>
 <p>
   Let's say that you want to write a test to see if <code>aria-hidden</code> is working the way you expect. You can write an integration test for your component that looks something like this: 
@@ -178,14 +178,14 @@ Of course, we can only automate a small number of accessibility checks, so devel
   @language="handlebars"
   id="testing-example-aria-hidden"
   @code="test('it has aria-hidden set to true', async function (assert) {
-    await render(hbs`&lt;Icon @name=&quot;activity&quot; /&gt;`);
+    await render(hbs`&lt;FlightIcon @name=&quot;activity&quot; /&gt;`);
     assert
-      .dom('svg.icon')
+      .dom('svg.flight-icon.flight-icon-activity.flight-icon-display-inline')
       .hasAria('hidden', 'true');
   });" />
 </div>
 
-<p>The <a href="https://github.com/simplabs/qunit-dom/blob/master/API.md" rel="external">full API is available</a> in the repository.</p>
+<p>The <a href="https://github.com/simplabs/qunit-dom/blob/master/API.md">full API is available</a> in the repository.</p>
 
 <EaDivider />
 <h2 id="section-focus-management">
@@ -207,7 +207,7 @@ Of course, we can only automate a small number of accessibility checks, so devel
 <h3>How focus works in Ember</h3>
 <p>Coming soon!</p>
 
-<h3>Helpful add-ons </h3>
+<h3>Helpful Addons </h3>
 <p>
   <ol>
     <li><a href="https://github.com/ember-a11y/ember-component-focus" rel="external">ember-component-focus</a></li>
