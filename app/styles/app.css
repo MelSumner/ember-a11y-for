@@ -86,11 +86,11 @@ a {
   text-dgreen;
 }
 
-/* here we are using kbd for inline code annotations */
-/* kbd {
+ul {
   @apply
-  text-dpink;
-} */
+  list-disc
+  list-inside;
+}
 
 ol {
   @apply
