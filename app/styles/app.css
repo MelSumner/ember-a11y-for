@@ -114,11 +114,9 @@ pre, pre code {
   white-space: pre-wrap !important;
 }
 pre[class*="language-"]{
-  background: black;
-  background-color: black;
+  border: 1px solid transparent;
+  @apply
+  border-dorange;
 }
-.code-toolbar {
-    border: 1px solid white;
-    border-radius: 5px;
-}
+
 

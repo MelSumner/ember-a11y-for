@@ -99,7 +99,7 @@ id="start-new-app"
 <EaDivider />
 <h2 id="section-routing"><a href="#section-routing">&sect;</a> Accessible Routing</h2>
 <p>Here are three common problems present in many single-page applications:
-  <ol>
+  <ol class="list-decimal">
     <li>When the route transition happens, new content is not automatically read by screen readers. (Want a deep dive? <a href="https://github.com/MelSumner/ember-a11y-roadmap/tree/master/rfc-research/router" rel="external">read some research</a>!)</li>
     <li>When a route transition occurs (e.g., a user goes from one page to another), the focus is not reset.</li>
     <li>A skiplink is missing. Apps need a <a href="https://www.w3.org/TR/WCAG20-TECHS/G1.html" rel="external">bypass mechanism</a> that links directly to the main content.</li>
@@ -142,7 +142,7 @@ id="start-new-app"
 
 <h3>Other Routing options</h3>
 <p>While other routing addons are not as fully-featured or unobtrusive, your app might need something different. If that's the case, here are some other Ember addons for you to consider: 
-  <ol>
+  <ol class="list-decimal">
     <li><a href="https://github.com/ember-a11y/ember-a11y" rel="external">ember-a11y</a></li>
     <li><a href="https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused" rel="external">ember-self-focused</a></li>
     <li><a href="https://github.com/ember-a11y/a11y-announcer" rel="external">a11y-announcer</a></li>
@@ -211,7 +211,7 @@ Of course, we can only automate a small number of accessibility checks, so devel
 <p>For things like modals and dropdowns, we have useful add-ons that help address focus. The <a href="https://emberobserver.com/addons/ember-focus-trap" rel="external">ember-focus-trap</a> add-on helps to make sure that focus stays where it should, and doesn't allow it to escape the container element.</p>
 
 <p>One thing that you don't want to do: autofocus. It should be avoided because autofocus doesn't give the user any choice for where they should focus next, and they will have no context for what will happen. A user with assistive technology may think that your web page is broken or something has gone wrong. Additionally, autofocus implementations violate multiple WCAG success criteria: 
-  <ul>
+  <ul class="list-disc list-inside">
     <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence" rel="external">1.3.2: Meaningful Sequence </a></li>
     <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation" rel="external">1.3.4: Orientation</a></li>
     <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order" rel="external">2.4.3: Focus Order</a></li>
@@ -220,11 +220,7 @@ Of course, we can only automate a small number of accessibility checks, so devel
 </p>
 
 <p>
-  Other focus-related add-ons:
-  <ol>
-    <li><a href="https://github.com/ember-a11y/ember-component-focus" rel="external">ember-component-focus</a></li>
-    <li><a href="https://github.com/melsumner/e-a11y-modal" rel="external">e-a11y-modal</a></li>
-  </ol>
+  Other focus-related add-ons include <a href="https://github.com/ember-a11y/ember-component-focus" rel="external">ember-component-focus</a> and <a href="https://github.com/melsumner/e-a11y-modal" rel="external">e-a11y-modal</a>. 
 </p>
 
 
@@ -235,7 +231,7 @@ Of course, we can only automate a small number of accessibility checks, so devel
 </h2> 
 <p>Coming Soon!</p> --}}
 {{!-- <p>Things to include:
-  <ol>
+  <ol class="list-decimal">
     <li>unique-id helper</li>
     <li>associating labels and form inputs</li>
     <li>ember-simple-select</li>
@@ -256,7 +252,7 @@ Of course, we can only automate a small number of accessibility checks, so devel
   <a href="section-coming-soon">&sect;</a> Coming Soon
 </h2>
 <p>
-  <ol>
+  <ol class="list-decimal">
     <li>Forms</li>
     <li>A Basic Checklist for Code</li>
     <li>Helpful Resources</li>
