@@ -164,17 +164,32 @@ id="start-new-app"
 {{!-- Include info about todo feature and how to make sure all of the a11y-related linting rules are turned on, as well as when to use the escape valve for linting rules. --}}
 
 <h3>Testing</h3>
-<p>Ember has you covered here too!
-  <ol>
-    <li>already included things</li>
-    <li>ember-a11y-testing</li>
-    <li>other useful testing addons</li>
-  </ol>
+<p>Ember has you covered here too! For accessibility issues that can be tested for <a href="https://a11y-automation.dev">in an automated fashion</a>, you can use the <a href="https://github.com/ember-a11y/ember-a11y-testing">ember-a11y-testing</a> addon.</p>
+
+<p>
+Of course, we can only automate a small number of accessibility checks, so developers must become comfortable with writing their own. One useful way to do this is to use the <a href="https://github.com/simplabs/qunit-dom">qunit-dom</a> addon, which will allow you to write tests that target specific attributes in your code- in this case, accessibility attributes. 
 </p>
+<p>
+  Let's say that you want to write a test to see if <code>aria-hidden</code> is working the way you expect. You can write an integration test for your component that looks something like this: 
+</p>
+
+<div class="w-full text-xl py-4">
+  <CodeBlock
+  @language="handlebars"
+  id="testing-example-aria-hidden"
+  @code="test('it has aria-hidden set to true', async function (assert) {
+    await render(hbs`&lt;FlightIcon @name=&quot;activity&quot; /&gt;`);
+    assert
+      .dom('svg.flight-icon.flight-icon-activity.flight-icon-display-inline')
+      .hasAria('hidden', 'true');
+  });" />
+</div>
+
+<p>The <a href="https://github.com/simplabs/qunit-dom/blob/master/API.md">full API is available</a> in the repository.</p>
 
 <EaDivider />
 <h2 id="section-focus-management">
-  <a href="">&sect;</a> Focus Management
+  <a href="#section-focus-management">&sect;</a> Focus Management
 </h2>
 <p>Focus determines which part of your application receives events from the keyboard and clipboard at any given time. Good focus management can provide a better experience for all of your users, but is particularly critical for those who may navigate exclusively via their keyboard or other input device, such as a switch device.</p>
 
