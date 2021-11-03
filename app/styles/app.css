@@ -113,10 +113,5 @@ code {
 pre, pre code {
   white-space: pre-wrap !important;
 }
-pre[class*="language-"]{
-  border: 1px solid transparent;
-  @apply
-  border-dorange;
-}
 
 
