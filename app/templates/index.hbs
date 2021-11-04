@@ -178,9 +178,9 @@ Of course, we can only automate a small number of accessibility checks, so devel
   @language="handlebars"
   id="testing-example-aria-hidden"
   @code="test('it has aria-hidden set to true', async function (assert) {
-    await render(hbs`&lt;FlightIcon @name=&quot;activity&quot; /&gt;`);
+    await render(hbs`&lt;Icon @name=&quot;activity&quot; /&gt;`);
     assert
-      .dom('svg.flight-icon.flight-icon-activity.flight-icon-display-inline')
+      .dom('svg.icon')
       .hasAria('hidden', 'true');
   });" />
 </div>
